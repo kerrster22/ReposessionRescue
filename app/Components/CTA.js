@@ -111,12 +111,9 @@ const CtaCard = () => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
-            className="bg-white rounded-3xl shadow-md max-w-2xl w-full h-[480px] py-8 px-6 sm:px-12 md:px-24 flex flex-col items-center mx-auto z-50"
+            className="bg-white rounded-3xl shadow-md max-w-2xl w-full h-[480px] py-8 px-4 sm:px-12 md:px-24 flex flex-col items-center mx-auto z-50"
           >
-            <div className="mb-4 mt-6">
-              <Image src="/assets/apple.png" alt="Logo" width={100} height={100} />
-            </div>
-            <h2 className="text-5xl font-semibold mb-4 mt-6 text-center font-antonio">Ready To Get Organised?</h2>
+            <h2 className="text-5xl font-semibold mb-4 mt-6 text-center font-antonio">Ready to Save Your Property from Repossession?</h2>
             <div className="flex space-x-4 mb-4 mt-8">
               <motion.button
                 className="bg-[#f1fd82] text-black py-3 px-14 rounded-full text-2xl border border-black font-semibold"
@@ -125,16 +122,7 @@ const CtaCard = () => {
                 onHoverStart={() => setIsHoveringYes(true)}
                 onHoverEnd={() => setIsHoveringYes(false)}
               >
-                Hover
-              </motion.button>
-              <motion.button
-                className="bg-white text-black py-3 px-14 rounded-full text-2xl border border-black font-semibold"
-                whileHover={{ backgroundColor: "#d3d3d3" }}
-                transition={{ duration: 0.3 }}
-                onHoverStart={() => setIsHoveringNo(true)}
-                onHoverEnd={() => setIsHoveringNo(false)}
-              >
-                No
+                Contact
               </motion.button>
             </div>
             <div className="text-center mt-4">
@@ -162,7 +150,7 @@ const CtaCard = () => {
           </motion.div>
   
           {/* IconBoxes around the CTA card */}
-          <motion.div
+          {/* <motion.div
             className="absolute -bottom-2/4 left-0 transform -translate-x-1/2 -translate-y-1/2"
             animate={isHoveringYes ? { x: "300%", y: "-300%", opacity: "0" } : { x: 0, y: 0 }}
           >
@@ -198,7 +186,7 @@ const CtaCard = () => {
             animate={isHoveringYes ? { x: "-250%", y: "-300%", opacity: "0" } : { x: 0, y: 0 }}
           >
             <IconBox icon={TimerIcon} size={80} rotation={15} />
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     );
